@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cari Zodiak</title>
+  <link rel="stylesheet" href="zodian.css">
+</head>
+<body>
+
+  <header>
+    <h1>Cari Zodiak Kamu</h1>
+    <nav>
+      <button onclick="tampilkanHalaman('beranda')">Beranda</button>
+      <button onclick="tampilkanHalaman('cari')">Cari Zodiak</button>
+      <button onclick="tampilkanHalaman('about')">About</button>
+    </nav>
+  </header>
+
+  <div id="beranda" class="halaman">
+    <h2>Selamat Datang!</h2>
+    <p>Website ini bisa mencari zodiak kamu berdasarkan tanggal lahir.</p>
+    <p>Ada 12 zodiak di bawah ini:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Zodiak</th>
+          <th>Tanggal</th>
+          <th>Elemen</th>
+        </tr>
+      </thead>
+      <tbody id="tabel-zodiak">
+        <!-- diisi oleh JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <div id="cari" class="halaman" style="display: none;">
+    <h2>Cari Zodiak</h2>
+
+    <div class="kotak">
+      <label>Nama:</label><br>
+      <input type="text" id="nama" placeholder="Masukkan nama"><br><br>
+
+      <label>Jenis Kelamin:</label><br>
+      <input type="radio" name="gender" value="Pria" id="pria">
+      <label for="pria">Pria</label>
+      <input type="radio" name="gender" value="Wanita" id="wanita">
+      <label for="wanita">Wanita</label>
+      <br><br>
+
+      <label>Tanggal Lahir:</label><br>
+      <input type="date" id="tanggal"><br><br>
+
+      <button onclick="cariZodiak()">Cari</button>
+    </div>
+
+    <p id="error" class="error"></p>
+
+    <div id="hasil" class="kotak" style="display: none;">
+      <h3 id="hasil-judul"></h3>
+      <p id="hasil-info"></p>
+      <p id="hasil-sifat"></p>
+    </div>
+  </div>
+
+  <div id="about" class="halaman" style="display: none;">
+    <h2>About</h2>
+    <div class="kotak">
+      <p><b>Dibuat oleh:</b> Wildan &amp; Dzaky</p>
+      <p>Website ini dibuat untuk tugas sekolah menggunakan HTML, CSS, dan JavaScript.</p>
+      <p>
+        <a href="https://github.com/willhabibiee" target="_blank">GitHub</a> |
+        <a href="https://www.instagram.com/willhabibiee_/" target="_blank">Instagram</a>
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Hasil zodiak hanya untuk hiburan ya :)</p>
+  </footer>
+
+  <script src="zodiac.js"></script>
+</body>
+</html>
